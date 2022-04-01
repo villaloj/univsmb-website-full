@@ -8,14 +8,33 @@
 {% block scripts %}
 {% endblock %}
 
+
 {% block content %}
 <h2>Liste des règles Nat</h2>
-{% for row in items %}
 
-<div class="alert alert-primary" role="alert">
-    <strong>Le {{ row.nameNat }} - {{ row.ipAddress }}</strong>
-    <br />{{ row.port }}
-</div>
+<table id="myTab" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nom de la règle</th>
+        <th>Adresse IP</th>
+        <th>Port</th>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for row in items %}
+        <tr>
+            <td>{{ row.nameNat }}</td>
+            <td>{{ row.ipAddress }}</td>
+            <td>{{ row.port }}</td>
+            <td>{{ row.type }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
 
-{% endfor %}
 {% endblock %}
+
+
+
+
