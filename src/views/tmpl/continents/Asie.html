@@ -1,6 +1,35 @@
-{% extends 'continents.html' %}
+{% extends 'tmpl/layout.html' %}
+
+{% block title %}Client{% endblock %}
+{% block breadcrumb %}Client{% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="css/default.css">
+{% endblock %}
+{% block scripts %}
+{% endblock %}
+
+
 {% block content %}
-<p>BLOCK DE DONNEES</p>
-        
-<div id ="test"> {{contenu | urlize | safe}}</div>
+<h2>Liste de voyages en Asie</h2>
+
+<table id="myTab" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Pays</th>
+        <th>Ville</th>
+
+        <th>Port destination</th>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for row in items %}
+        <tr>
+            <td>{{ row.name }}</td>
+            <td>{{ row.ville }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
 {% endblock %}

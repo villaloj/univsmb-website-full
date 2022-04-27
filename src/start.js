@@ -18,17 +18,20 @@ templateEngine.configure('views', {
 var start = require('./controllers/iptables/nat');
 app.get('/', start.render);
 
-var alias = require('./controllers/iptables/alias');
-app.get('/alias', alias.render);
+var Afrique = require('./controllers/iptables/Afrique');
+app.get('/Afrique', Afrique.render);
+
+var Amerique = require('./controllers/iptables/Amerique');
+app.get('/Amerique', Amerique.render);
+
+var Asie = require('./controllers/iptables/Asie');
+app.get('/Asie', Asie.render);
+
+var Europe = require('./controllers/iptables/Europe');
+app.get('/Europe', Europe.render);
 
 var nat = require('./controllers/iptables/nat');
 app.get('/nat', nat.render);
-
-var filter = require('./controllers/iptables/filter');
-app.get('/filter', filter.render);
-
-
-
 
 
 // Routes statiques

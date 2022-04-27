@@ -2,7 +2,7 @@ var sql = require('../db/db_mariadb');
 
 var connexion = null;
 
-class Alias {
+class Amerique {
   constructor(req, res) {
     this.req = req;
     this.res = res;
@@ -15,22 +15,19 @@ class Alias {
 
   }
 
-  async getAliasList() {
+  async getAmeriqueList() {
     try {
-      this.aliasList = await connexion.query("SELECT id, name, ipAddress, port FROM nat_alias");
-
-      return this.aliasList;
+      this.ameriqueList = await connexion.query("SELECT name, ville FROM voyage WHERE id_continent=4");
+      return this.ameriqueList;
     }
     catch (anError) {
-      console.log('Error to get alias list !');
+      console.log('Error to get Amerique list !');
 
       // See error from SQL Client
-      //console.log(anError);
+      console.log(anError);
     }
   }
-  getAlias() {
-    return this.aliasList;
+  getAmerique() {
+    return this.ameriqueList;
   }
 }
-
-module.exports = Alias;
