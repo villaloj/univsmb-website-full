@@ -10,28 +10,12 @@
 
 
 {% block content %}
-<h2>Liste des règles Nat</h2>
+<h2>Liste des Continents</h2>
 
-<table id="myTab" class="table table-striped">
-    <thead>
-      <tr>
-        <th>Nom de la règle</th>
-        <th>Adresse IP</th>
-        <th>Port</th>
-        <th>Type</th>
-      </tr>
-    </thead>
-    <tbody>
-    {% for row in items %}
-        <tr>
-            <td>{{ row.nameNat }}</td>
-            <td>{{ row.ipAddress }}</td>
-            <td>{{ row.port }}</td>
-            <td>{{ row.type }}</td>
-        </tr>
-    {% endfor %}
-    </tbody>
-</table>
+<h3><li><a href="./continents/Afrique.html">Afrique</a></li></h3>
+<h3><li><a href="./continents/Amerique.html">Amérique</a></li></h3>
+<h3><li><a href="./continents/Asie.html">Asie</a></li></h3>
+<h3><li><a href="./continents/Europe.html">Afrique</a></li></h3>
 
 {% endblock %}
 
