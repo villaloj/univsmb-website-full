@@ -1,5 +1,5 @@
 
-var Europe = require('../../models/iptables/Europe');
+var Europe = require('../../models/continents/Europe');
 
 exports.render = async function (req, res) {
   var defaultComponent = new Europe(req, res);

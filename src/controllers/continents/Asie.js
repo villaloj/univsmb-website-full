@@ -1,4 +1,4 @@
-var Asie = require('../../models/iptables/Asie');
+var Asie = require('../../models/continents/Asie');
 
 exports.render = async function (req, res) {
   var defaultComponent = new Asie(req, res);

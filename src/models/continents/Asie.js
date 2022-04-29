@@ -2,7 +2,7 @@ var sql = require('../db/db_mariadb');
 
 var connexion = null;
 
-class Afrique {
+class Asie {
   constructor(req, res) {
     this.req = req;
     this.res = res;
@@ -15,21 +15,21 @@ class Afrique {
 
   }
 
-  async getAfriqueList() {
+  async getAsieList() {
     try {
-      this.afriqueList = await connexion.query("SELECT name, ville FROM voyage WHERE id_continent=2");
-      return this.afriqueList;
+      this.asieList = await connexion.query("SELECT id_pays, ville FROM voyage WHERE id_continent=2");
+      return this.asieList;
     }
     catch (anError) {
-      console.log('Error to get Afrique list !');
+      console.log('Error to get Asie list !');
 
       // See error from SQL Client
       console.log(anError);
     }
   }
-  getAfrique() {
-    return this.afriqueList;
+  getAsie() {
+    return this.asieList;
   }
 }
 
-module.exports = Afrique;
+module.exports = Asie;

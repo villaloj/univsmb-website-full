@@ -1,4 +1,4 @@
-var Afrique = require('../../models/iptables/Afrique');
+var Afrique = require('../../models/continents/Afrique');
 
 exports.render = async function (req, res) {
   var defaultComponent = new Afrique(req, res);

@@ -2,7 +2,7 @@ var sql = require('../db/db_mariadb');
 
 var connexion = null;
 
-class Amerique {
+class Europe {
   constructor(req, res) {
     this.req = req;
     this.res = res;
@@ -15,19 +15,21 @@ class Amerique {
 
   }
 
-  async getAmeriqueList() {
+  async getEuropeList() {
     try {
-      this.ameriqueList = await connexion.query("SELECT name, ville FROM voyage WHERE id_continent=4");
-      return this.ameriqueList;
+      this.europeList = await connexion.query("SELECT id_pays, ville FROM voyage WHERE id_continent=1");
+      return this.europeList;
     }
     catch (anError) {
-      console.log('Error to get Amerique list !');
+      console.log('Error to get Europe list !');
 
       // See error from SQL Client
       console.log(anError);
     }
   }
-  getAmerique() {
-    return this.ameriqueList;
+  getEurope() {
+    return this.europeList;
   }
 }
+
+module.exports = Europe;
