@@ -17,7 +17,7 @@ class Amerique {
 
   async getAmeriqueList() {
     try {
-      this.ameriqueList = await connexion.query("SELECT id_pays, ville FROM voyage WHERE id_continent=4");
+      this.ameriqueList = await connexion.query("SELECT name_pays, ville FROM voyage INNER JOIN pays ON voyage.id_pays=pays.id_pays AND voyage.id_continent=4");
       return this.ameriqueList;
     }
     catch (anError) {

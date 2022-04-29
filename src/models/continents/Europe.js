@@ -17,7 +17,7 @@ class Europe {
 
   async getEuropeList() {
     try {
-      this.europeList = await connexion.query("SELECT id_pays, ville FROM voyage WHERE id_continent=1");
+      this.europeList = await connexion.query("SELECT name_pays, ville FROM voyage INNER JOIN pays ON voyage.id_pays=pays.id_pays AND voyage.id_continent=1");
       return this.europeList;
     }
     catch (anError) {
