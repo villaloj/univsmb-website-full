@@ -8,26 +8,25 @@
 {% block scripts %}
 {% endblock %}
 
-
+<form>
 {% block content %}
 <h2>Liste de voyages en Afrique</h2>
 
-<table id="myTab" class="table table-striped">
-    <thead>
-      <tr>
-        <th>Pays</th>
-        <th>Ville</th>
+<p>Choisir un pays</p>
+<select name="name_pays" id="id_pays">
+{% for row in items %}
+            <option>{{ row.name_pays}}</option>
+{% endfor %}
+</select>
 
-      </tr>
-    </thead>
-    <tbody>
-    {% for row in items %}
-        <tr>
-            <td>{{ row.name_pays }}</td>
-            <td>{{ row.ville }}</td>
-        </tr>
-    {% endfor %}
-    </tbody>
-</table>
+<p>Choisir une ville</p>
+<select name="ville" id="id_ville">
+{% for row in items %}
+            <option>{{ row.ville }}</option>
+{% endfor %}
+</select>
+<br /><input type="submit" name="ok" id="ok" value="Envoyer" />
+</form>
+   
 
 {% endblock %}
