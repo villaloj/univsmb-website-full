@@ -13,20 +13,20 @@
 <h2>Liste de voyages en Afrique</h2>
 
 <p>Choisir un pays</p>
-<select name="name_pays" id="id_pays">
+<select name="name_pays" id="id_pays" onchange="villeChange(this);">
 {% for row in items %}
-            <option>{{ row.name_pays}}</option>
+    <option>{{ row.name_pays}}</option>
 {% endfor %}
 </select>
 
 <p>Choisir une ville</p>
-<select name="ville" id="id_ville">
-{% for row in items %}
-            <option>{{ row.ville }}</option>
-{% endfor %}
-</select>
+<label for="ville">Selectioner a ville</label>
+  <select id="ville">
+    <option value="0">Ville</option>
+  </select>
 <br /><input type="submit" name="ok" id="ok" value="Envoyer" />
 </form>
-   
+
+
 
 {% endblock %}

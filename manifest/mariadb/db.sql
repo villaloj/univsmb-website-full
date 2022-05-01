@@ -54,9 +54,9 @@ INSERT INTO voyages.voyage (id_voyage, id_continent, id_pays, ville) VALUES
   (5, 2, 5, 'Lisbonne'),
   (6, 2, 6, 'Porto'),
   (7, 2, 7, 'Berlin'),
-  (8, 3, 7, 'Nordlingen'),
+  (8, 2, 7, 'Nordlingen'),
   (9, 3, 9, 'Shanghai'),
-  (10, 3, 10, 'Wuhan'),
+  (10, 4, 10, 'Wuhan'),
   (11, 4, 11, 'Bombay'),
   (12, 4, 10, 'NewDelhi'),
   (13, 4, 11, 'Tokyo'),
@@ -68,4 +68,5 @@ INSERT INTO voyages.voyage (id_voyage, id_continent, id_pays, ville) VALUES
   (19, 2, 6, 'Mexico'),
   (20, 2, 7, 'PuertoMorelos'),
   (21, 3, 8, 'Cuzco'),
-  (22, 3, 9, 'Huaraz');
+  (22, 3, 9, 'Huaraz'),
+  (23, 3, 9, 'PPPPPP');
